@@ -134,6 +134,8 @@ GameObject:
   - component: {fileID: 416322015}
   - component: {fileID: 416322017}
   - component: {fileID: 416322016}
+  - component: {fileID: 416322018}
+  - component: {fileID: 416322019}
   m_Layer: 0
   m_Name: _Script
   m_TagString: Untagged
@@ -176,6 +178,8 @@ MonoBehaviour:
   - {fileID: 2573524309517307951, guid: d7b3bc30032854029ba6832d801b820b, type: 3}
   - {fileID: 3450895657664714647, guid: 1fa03a072776e49589f78f26078e6ac7, type: 3}
   - {fileID: 3577201369186796273, guid: 844b0cf043949446d9329d463b8f70fd, type: 3}
+  - {fileID: 9103724736054679900, guid: 408489c40c2094cdf91c3358ffb7f876, type: 3}
+  - {fileID: 7640780226382824646, guid: 41617882fd3544dbe8471c917df8475a, type: 3}
 --- !u!114 &416322017
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -188,6 +192,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8035815e96482c4f8235b05e107dbbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &416322018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 416322014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c14a20884ae3b884a942e5128fb77c90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  housePrefab: {fileID: 5958316442239806738, guid: 33dd7643a2e11463cbf445ab0bc38f2a, type: 3}
+--- !u!114 &416322019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 416322014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffd4777d55e6efd40897176df8ed93b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  treePrefab: {fileID: -2793727289926329592, guid: 836d47da53dc6e64798551a9527867e6, type: 3}
+  spawnInterval: 1
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -367,8 +398,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalRotation: {x: 0.1626448, y: -0.8044867, z: 0.51055753, w: 0.2562791}
+  m_LocalPosition: {x: 7.497196, y: 8.211033, z: 8.577227}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
