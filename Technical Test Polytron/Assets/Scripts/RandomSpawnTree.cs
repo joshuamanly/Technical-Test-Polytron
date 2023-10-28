@@ -4,8 +4,9 @@ using UnityEngine;
 public class RandomSpawnTree : MonoBehaviour
 {
     [SerializeField] private GameObject treePrefab; 
-    [SerializeField] private float spawnInterval = 1f; 
-
+    [SerializeField] private float spawnInterval = 1f;
+    private int dirtCount;
+    private int plantedTreeCount = 0;
     public void SpawnTreesPeriodically()
     {
         StartCoroutine(SpawnTrees());
@@ -13,6 +14,7 @@ public class RandomSpawnTree : MonoBehaviour
 
     private IEnumerator SpawnTrees()
     {
+        dirtCount = GameObject.FindGameObjectsWithTag("Dirt").Length;
         while (true)
         {
             yield return new WaitForSeconds(spawnInterval); 
@@ -31,8 +33,15 @@ public class RandomSpawnTree : MonoBehaviour
                     Instantiate(treePrefab, centerPosition, Quaternion.identity);
 
                     dirtTile.hasTreeSpawned = true;
+                    plantedTreeCount++;
+
+                    if (plantedTreeCount >= dirtCount)
+                    {
+                        Debug.Log("Tree is finished planting");
+                    }
                 }
             }
+            
         }
     }
 }
