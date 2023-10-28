@@ -1,4 +1,3 @@
-// Script TileManager
 using UnityEngine;
 
 public class TileManager : MonoBehaviour
@@ -7,6 +6,11 @@ public class TileManager : MonoBehaviour
     // Hapus treeInstantiated dari sini
 
     void Update()
+    {
+        OnClick();
+    }
+
+    private void OnClick()
     {
         if (Input.GetMouseButtonDown(0))
         {
@@ -22,6 +26,17 @@ public class TileManager : MonoBehaviour
                     if (dirtTile != null && !dirtTile.houseInstantiated && !dirtTile.hasTreeSpawned)
                     {
                         dirtTile.InstantiateHouse(housePrefab);
+                        GameManager.Instance.score.AddScore(10);
+                    }
+                }
+                if (hit.collider.CompareTag("Desert"))
+                {
+                    // Anda dapat memanggil fungsi di skrip DirtTile untuk menangani logika tersebut
+                    DesertTile desertTIle = hit.collider.GetComponent<DesertTile>();
+                    if (desertTIle != null && !desertTIle.houseInstantiated)
+                    {
+                        desertTIle.InstantiateHouse(housePrefab);
+                        GameManager.Instance.score.AddScore(2);
                     }
                 }
             }

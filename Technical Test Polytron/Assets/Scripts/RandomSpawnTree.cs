@@ -1,21 +1,17 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class RandomSpawnTree : MonoBehaviour
 {
-    public GameObject treePrefab; // Prefab pohon yang akan di-spawn.
-    public float spawnInterval = 1f; // Interval waktu antara spawn pohon.
+    public GameObject treePrefab; 
+    [SerializeField] private float spawnInterval = 1f; 
 
-    private List<GameObject> spawnedTrees = new List<GameObject>();
-
-    private void Start()
+    public void SpawnTreesPeriodically()
     {
-        // Memulai coroutine untuk spawn pohon secara berkala.
-        StartCoroutine(SpawnTreesPeriodically());
+        StartCoroutine(SpawnTrees());
     }
 
-    private IEnumerator SpawnTreesPeriodically()
+    private IEnumerator SpawnTrees()
     {
         while (true)
         {
@@ -45,12 +41,6 @@ public class RandomSpawnTree : MonoBehaviour
                 }
             }
         }
-    }
-
-
-    private bool HasTreeSpawned(GameObject dirtPrefab)
-    {
-        return spawnedTrees.Exists(tree => tree.transform.position == dirtPrefab.transform.position);
     }
 }
 

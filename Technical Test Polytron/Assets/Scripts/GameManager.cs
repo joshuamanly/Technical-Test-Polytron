@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
-
+    public Score score;
     private void Awake()
     {
         Instance = this;
@@ -13,8 +13,6 @@ public class GameManager : MonoBehaviour
     
     void Start()
     {
-        
+        GetComponent<RandomSpawnTree>().SpawnTreesPeriodically();
     }
-
-    
 }

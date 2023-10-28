@@ -1,4 +1,3 @@
-// Script DirtTile
 using UnityEngine;
 
 public class DirtTile : MonoBehaviour
@@ -12,7 +11,7 @@ public class DirtTile : MonoBehaviour
         Vector3 centerPosition = GetComponent<Collider>().bounds.center;
 
          
-        Instantiate(housePrefab, centerPosition, Quaternion.identity);
+        Instantiate(housePrefab, centerPosition, Quaternion.Euler(0,-90,0));
 
      
         houseInstantiated = true;
