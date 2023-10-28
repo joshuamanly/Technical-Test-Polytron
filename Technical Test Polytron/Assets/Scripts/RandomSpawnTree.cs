@@ -6,7 +6,7 @@ public class RandomSpawnTree : MonoBehaviour
     [SerializeField] private GameObject treePrefab; 
     [SerializeField] private float spawnInterval = 1f;
     private int dirtCount;
-    private int plantedTreeCount = 0;
+    public int plantedTreeCount = 0;
     public void SpawnTreesPeriodically()
     {
         StartCoroutine(SpawnTrees());

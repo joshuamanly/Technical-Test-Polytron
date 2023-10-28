@@ -12,7 +12,7 @@ public class DirtTile : MonoBehaviour
 
          
         Instantiate(housePrefab, centerPosition, Quaternion.Euler(0,-90,0));
-
+        
      
         houseInstantiated = true;
     }
