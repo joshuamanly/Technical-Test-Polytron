@@ -7,8 +7,6 @@ public class RandomGeneratedMap : MonoBehaviour
     [SerializeField] private int mapWidth = 8;
     [SerializeField] private int mapHeight = 8;
     [SerializeField] private GameObject[] tilePrefabs; 
-    
-
     private void Start()
     {
         MakeMapGrid();

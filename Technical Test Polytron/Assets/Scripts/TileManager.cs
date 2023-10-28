@@ -20,8 +20,7 @@ public class TileManager : MonoBehaviour
             if (Physics.Raycast(ray, out hit))
             {
                 if (hit.collider.CompareTag("Dirt"))
-                {
-                    // Anda dapat memanggil fungsi di skrip DirtTile untuk menangani logika tersebut
+                {             
                     DirtTile dirtTile = hit.collider.GetComponent<DirtTile>();
                     if (dirtTile != null && !dirtTile.houseInstantiated && !dirtTile.hasTreeSpawned)
                     {
@@ -30,8 +29,7 @@ public class TileManager : MonoBehaviour
                     }
                 }
                 if (hit.collider.CompareTag("Desert"))
-                {
-                    // Anda dapat memanggil fungsi di skrip DirtTile untuk menangani logika tersebut
+                {           
                     DesertTile desertTIle = hit.collider.GetComponent<DesertTile>();
                     if (desertTIle != null && !desertTIle.houseInstantiated)
                     {
